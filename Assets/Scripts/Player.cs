@@ -11,36 +11,69 @@ public class Player : MonoBehaviour
     public GameObject Lantern;
     enum Movement { STILL, RIGHT, LEFT, UP, DOWN };
     private Movement mov;
- 
+
+    private Animator anim;
+
+    private int runningLID;
+    private int runningRID;
+    private int runningUID;
+    private int runningDID;
+
+    private bool isRunningL;
+    private bool isRunningR;
+    private bool isRunningU;
+    private bool isRunningD;
+
     void Start()
     {
         mov = Movement.STILL;
         rb2D = GetComponent<Rigidbody2D>();
+
+        anim = GetComponent<Animator>();
+
+        isRunningL = false;
+        isRunningR = false;
+        isRunningU = false;
+        isRunningD = false;
     }
 
     void Update()
     {
+        isRunningL = false;
+        isRunningR = false;
+        isRunningU = false;
+        isRunningD = false;
+
         mov = Movement.STILL;
 
         if (Input.GetKey(KeyCode.W))
         {
             mov = Movement.UP;
+            isRunningU = true;
         }
 
         else if (Input.GetKey(KeyCode.S))
         {
             mov = Movement.DOWN;
+            isRunningD = true;
         }
 
         else if (Input.GetKey(KeyCode.A))
         {
             mov = Movement.LEFT;
+            isRunningL = true;
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
             mov = Movement.RIGHT;
+            isRunningR = true;
         }
+
+        anim.SetBool(runningLID, isRunningL);
+        anim.SetBool(runningRID, isRunningR);
+        anim.SetBool(runningUID, isRunningU);
+        anim.SetBool(runningDID, isRunningD);
     }
 
     private void FixedUpdate()
