@@ -35,6 +35,11 @@ public class Player : MonoBehaviour
         isRunningR = false;
         isRunningU = false;
         isRunningD = false;
+
+        runningLID = Animator.StringToHash("isRunningL");
+        runningRID = Animator.StringToHash("isRunningR");
+        runningUID = Animator.StringToHash("isRunningU");
+        runningDID = Animator.StringToHash("isRunningD");
     }
 
     void Update()
