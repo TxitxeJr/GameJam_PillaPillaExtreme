@@ -6,6 +6,7 @@ public class Pointer : MonoBehaviour
 {
     public Camera cam;
     public GameObject pointer;
+    public int counter = 0;
 
     Vector2 mousePos;
 
@@ -30,6 +31,8 @@ public class Pointer : MonoBehaviour
             if(hit.collider)
             {
                 Destroy(hit.collider.gameObject);
+                counter++;
+                Debug.Log(counter);
             }
         }
     }
