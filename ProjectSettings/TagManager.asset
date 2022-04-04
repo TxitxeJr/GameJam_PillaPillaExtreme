@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Target
   - Kid
+  - lantern
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: tileset
+    uniqueID: 4115039755
+    locked: 0
+  - name: decorations
+    uniqueID: 226914921
     locked: 0
   - name: Player
     uniqueID: 1763839545
