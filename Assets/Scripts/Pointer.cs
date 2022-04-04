@@ -7,7 +7,7 @@ public class Pointer : MonoBehaviour
     public Camera cam;
     public GameObject pointer;
     public int counter = 0;
-    public GameObject kid;
+    
 
     Vector2 mousePos;
 
@@ -15,7 +15,7 @@ public class Pointer : MonoBehaviour
     void Update()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        Catch();
+        
     }
 
     private void FixedUpdate()
@@ -23,19 +23,5 @@ public class Pointer : MonoBehaviour
         pointer.transform.position = mousePos;
     }
 
-    private void Catch()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, 100f);
-            if(hit.collider)
-            {  
-               Destroy(this.kid);
-               counter++;
-               Debug.Log(counter);
-                
-            }
-        }
-    }
+    
 }
