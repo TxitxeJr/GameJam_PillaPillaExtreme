@@ -33,6 +33,10 @@ public class KidBehaviour : MonoBehaviour
     void Update()
     {
         moveKid();
+        if(this.niño.enabled == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     public void moveKid()
