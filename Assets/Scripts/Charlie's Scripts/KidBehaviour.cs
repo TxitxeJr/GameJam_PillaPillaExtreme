@@ -11,9 +11,6 @@ public class Kid
     public float changeDistance;
     public byte nextPosition;
     public bool isOnTarget;
-
-    
-
 }
 public class KidBehaviour : MonoBehaviour
 {
