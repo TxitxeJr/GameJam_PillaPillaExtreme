@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &129670703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2140351707250784557, guid: f877b714ac1d54349957337eafd6115c, type: 3}
+  m_PrefabInstance: {fileID: 2140351707152130724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!213 &452038887
 Sprite:
   m_ObjectHideFlags: 0
@@ -464,6 +469,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 4808549676826114446, guid: f0a913ec60838df42bc2b5070706e1c4, type: 3}
+      propertyPath: kidObject
+      value: 
+      objectReference: {fileID: 2094190841}
     - target: {fileID: 7678581918386338496, guid: f0a913ec60838df42bc2b5070706e1c4, type: 3}
       propertyPath: m_Name
       value: Kid
@@ -3623,6 +3632,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1741315504}
+    - target: {fileID: -5871190384645582802, guid: 131c3ec1bbec4574ab0cb281c58f910b, type: 3}
+      propertyPath: kid
+      value: 
+      objectReference: {fileID: 2094190841}
     - target: {fileID: 310319868109900800, guid: 131c3ec1bbec4574ab0cb281c58f910b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3685,6 +3698,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 131c3ec1bbec4574ab0cb281c58f910b, type: 3}
+--- !u!1 &2094190841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7678581918386338496, guid: f0a913ec60838df42bc2b5070706e1c4, type: 3}
+  m_PrefabInstance: {fileID: 760495790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2096149791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3774,5 +3792,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2140351707742498790, guid: f877b714ac1d54349957337eafd6115c, type: 3}
+      propertyPath: Lantern
+      value: 
+      objectReference: {fileID: 129670703}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f877b714ac1d54349957337eafd6115c, type: 3}
