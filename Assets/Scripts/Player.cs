@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     private float current_speed = 0;
     private float current_speed2 = 0;
     private Rigidbody2D rb2D;
+    public GameObject Lantern;
     enum Movement { STILL, RIGHT, LEFT, UP, DOWN };
     private Movement mov;
  
@@ -56,18 +57,22 @@ public class Player : MonoBehaviour
             case Movement.RIGHT:
                 current_speed = speed;
                 rb2D.velocity = new Vector2(current_speed * delta, 0);
+                Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 270);
                 break;
             case Movement.LEFT:
                 current_speed = -speed;
                 rb2D.velocity = new Vector2(current_speed * delta, 0);
+                Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 90); 
                 break;
             case Movement.UP:
                 current_speed = speed;
                 rb2D.velocity = new Vector2(0, current_speed * delta);
+                Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 0);
                 break;
             case Movement.DOWN:
                 current_speed = -speed;
                 rb2D.velocity = new Vector2(0, current_speed * delta);
+                Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 180);
                 break;
         }
     }

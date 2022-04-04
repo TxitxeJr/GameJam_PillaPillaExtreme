@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7678581918386338496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9, y: -3.77, z: 0}
-  m_LocalScale: {x: 0.002, y: 0.002, z: 1}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 64f360a2f482fb742a29b6bb3767a29f, type: 3}
-  m_Color: {r: 1, g: 0.08176094, b: 0.08176094, a: 1}
+  m_Color: {r: 1, g: 0.93567914, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &-856379096370415967
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
     wayPoints:
     - {fileID: 5077947430866354649, guid: 5f8ee7f4925636c4d876b916d5644d95, type: 3}
     - {fileID: 4928089169077623406, guid: a262f5a14a076d34b984afd501649280, type: 3}
-    kidTarget: {fileID: 0}
+    kidTarget: {fileID: 5077947430866354649, guid: 5f8ee7f4925636c4d876b916d5644d95, type: 3}
     changeDistance: 0.2
     nextPosition: 0
     isOnTarget: 0

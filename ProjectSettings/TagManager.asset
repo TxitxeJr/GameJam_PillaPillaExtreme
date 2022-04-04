@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Target
+  - Kid
+  - lantern
   layers:
   - Default
   - TransparentFX
@@ -11,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Pointer
   - 
   - 
   - 
@@ -41,6 +44,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: tileset
+    uniqueID: 4115039755
+    locked: 0
+  - name: decorations
+    uniqueID: 226914921
+    locked: 0
   - name: Player
     uniqueID: 1763839545
+    locked: 0
+  - name: Kid
+    uniqueID: 1609661229
+    locked: 0
+  - name: Pointer
+    uniqueID: 1043770255
     locked: 0

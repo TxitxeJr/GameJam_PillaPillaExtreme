@@ -11,20 +11,22 @@ public class Kid
     public float changeDistance;
     public byte nextPosition;
     public bool isOnTarget;
-    
-
 }
 public class KidBehaviour : MonoBehaviour
 {
 
     Rigidbody2D rb2d;
     public Kid kid;
-   
+
+    public SpriteRenderer niño;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         kid.isOnTarget = false;
-        
+        this.niño = GetComponent<SpriteRenderer>();
+        this.niño.enabled = false;
+
     }
 
     // Update is called once per frame
@@ -56,9 +58,22 @@ public class KidBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Target")
+        if (collision.gameObject.tag == "lantern")
+        {
+            this.niño.enabled = true;
+        } 
+
+        if (collision.gameObject.tag == "Target")
         {
             kid.isOnTarget = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "lantern")
+        {
+            this.niño.enabled = false;
         }
     }
 }
