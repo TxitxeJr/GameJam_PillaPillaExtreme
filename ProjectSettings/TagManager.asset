@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Target
+  - Kid
   layers:
   - Default
   - TransparentFX
@@ -11,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Pointer
   - 
   - 
   - 
@@ -43,4 +45,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1763839545
+    locked: 0
+  - name: Kid
+    uniqueID: 1609661229
+    locked: 0
+  - name: Pointer
+    uniqueID: 1043770255
     locked: 0
