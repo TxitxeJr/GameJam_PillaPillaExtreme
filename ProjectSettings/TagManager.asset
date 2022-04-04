@@ -52,3 +52,6 @@ TagManager:
   - name: Pointer
     uniqueID: 1043770255
     locked: 0
+  - name: Background
+    uniqueID: 2225519625
+    locked: 0
