@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private float current_speed2 = 0;
     private Rigidbody2D rb2D;
     public GameObject Lantern;
+
     enum Movement { STILL, RIGHT, LEFT, UP, DOWN };
     private Movement mov;
 
