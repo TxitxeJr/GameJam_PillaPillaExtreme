@@ -65,3 +65,6 @@ TagManager:
   - name: UI
     uniqueID: 2580922791
     locked: 0
+  - name: Foot
+    uniqueID: 3941256337
+    locked: 0
