@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private float current_speed2 = 0;
     private Rigidbody2D rb2D;
     public GameObject Lantern;
+
     enum Movement { STILL, RIGHT, LEFT, UP, DOWN };
     private Movement mov;
 
@@ -119,6 +120,14 @@ public class Player : MonoBehaviour
                 Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 180);
                 Lantern.transform.localPosition = new Vector3(3f, -10f, 0);
                 break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Kid")
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
     }
 }
