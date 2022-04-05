@@ -7,6 +7,9 @@ TagManager:
   - Target
   - Kid
   - lantern
+  - Kid 1
+  - Kid 2
+  - Kid 3
   layers:
   - Default
   - TransparentFX

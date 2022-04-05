@@ -12,14 +12,13 @@ public class Kid
     public byte nextPosition;
     public bool isOnTarget;
 
-    public int counter = 0;
+    
 }
 public class KidBehaviour : MonoBehaviour
 {
-
+    public bool isCatched;
     Rigidbody2D rb2d;
     public Kid kid;
-
     public SpriteRenderer niño;
 
     void Start()
@@ -28,6 +27,7 @@ public class KidBehaviour : MonoBehaviour
         kid.isOnTarget = false;
         this.niño = GetComponent<SpriteRenderer>();
         this.niño.enabled = false;
+        isCatched = false;
 
     }
 
@@ -37,8 +37,7 @@ public class KidBehaviour : MonoBehaviour
         moveKid();
         if(this.niño.enabled == true && Input.GetKeyDown(KeyCode.Space))
         {
-            kid.counter++;
-            Debug.Log(kid.counter);
+            isCatched = true;
             Destroy(this.gameObject);
         }
     }
@@ -70,11 +69,12 @@ public class KidBehaviour : MonoBehaviour
         {
             this.niño.enabled = true;
         } 
-
         if (collision.gameObject.tag == "Target")
         {
             kid.isOnTarget = true;
         }
+       
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

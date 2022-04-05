@@ -144,4 +144,5 @@ MonoBehaviour:
     changeDistance: 0.2
     nextPosition: 0
     isOnTarget: 0
+  counter: 4
   "ni\xF1o": {fileID: 0}
