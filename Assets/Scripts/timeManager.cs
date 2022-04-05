@@ -20,6 +20,6 @@ public class timeManager : MonoBehaviour
     void Update()
     {
         startingTime -= Time.deltaTime;
-        text.text = "" + startingTime;
+        text.text = "" + Mathf.Round (startingTime);
     }
 }
