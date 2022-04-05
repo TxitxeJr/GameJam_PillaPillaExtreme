@@ -2,13 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
-public class SceneManager : MonoBehaviour
+public class ScenesManager : MonoBehaviour
 {
+    static ScenesManager instance;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+
+
+    }
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
@@ -16,6 +32,31 @@ public class SceneManager : MonoBehaviour
     {
       //programar condicion de victoria y derrota una vez tengamos las escenas  
     }
+    public void ToGameScene()
+    {
+        SceneManager.LoadScene("Charlie's Scene");
+    }
+
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /*
      private void loseCondition(){
@@ -57,4 +98,5 @@ public class SceneManager : MonoBehaviour
 
     }
     */
+
 }
