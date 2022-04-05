@@ -50,6 +50,14 @@ public class ScenesManager : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
     }
+    public void ToMenuScene()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void ToSettingsScene()
+    {
+        SceneManager.LoadScene("Settings");
+    }
 
 
     public void Quit()

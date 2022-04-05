@@ -557,7 +557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7785782400211059139, guid: 776d0b58ef65a984eaf28025658675c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToGameScene
+      value: ToMenuScene
       objectReference: {fileID: 0}
     - target: {fileID: 7785782400211059139, guid: 776d0b58ef65a984eaf28025658675c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
