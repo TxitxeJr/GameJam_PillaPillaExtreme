@@ -6,7 +6,7 @@ public class Pointer : MonoBehaviour
 {
     public Camera cam;
     public GameObject pointer;
-    public int counter = 0;
+    
     
 
     Vector2 mousePos;

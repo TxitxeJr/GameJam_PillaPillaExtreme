@@ -11,6 +11,8 @@ public class Kid
     public float changeDistance;
     public byte nextPosition;
     public bool isOnTarget;
+
+    public int counter = 0;
 }
 public class KidBehaviour : MonoBehaviour
 {
@@ -35,6 +37,8 @@ public class KidBehaviour : MonoBehaviour
         moveKid();
         if(this.niño.enabled == true && Input.GetKeyDown(KeyCode.Space))
         {
+            kid.counter++;
+            Debug.Log(kid.counter);
             Destroy(this.gameObject);
         }
     }
