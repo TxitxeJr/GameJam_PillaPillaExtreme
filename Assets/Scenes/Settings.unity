@@ -424,10 +424,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 234557244546518555, guid: d72c7513b58290a4ab005218c4222879, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -3201593872194565669, guid: 495f367c0206b4b46aed4c2b4119dc86, type: 2}
     - target: {fileID: 234557244601271477, guid: d72c7513b58290a4ab005218c4222879, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5e6766d0fb921fa4aa4b79a2ca477cfe, type: 3}
+    - target: {fileID: 234557244601271477, guid: d72c7513b58290a4ab005218c4222879, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 7112048242203238016, guid: 495f367c0206b4b46aed4c2b4119dc86, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d72c7513b58290a4ab005218c4222879, type: 3}
 --- !u!1 &1609719297 stripped
