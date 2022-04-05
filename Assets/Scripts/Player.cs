@@ -75,6 +75,29 @@ public class Player : MonoBehaviour
             isRunningR = true;
         }
 
+        //Lantern.transform.localPosition = new Vector3(0, 0, 0);
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Lantern.transform.localPosition = new Vector3(- 3f, 0, 0);
+        }
+
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            Lantern.transform.localPosition = new Vector3(3f, - 10f, 0);
+        }
+
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            Lantern.transform.localPosition = new Vector3(0, - 10f, 0);
+        }
+
+        else if(Input.GetKeyDown(KeyCode.D))
+        {
+            Lantern.transform.localPosition = new Vector3(8.5f, - 10f, 0);
+        }
+
+        
         anim.SetBool(runningLID, isRunningL);
         anim.SetBool(runningRID, isRunningR);
         anim.SetBool(runningUID, isRunningU);
