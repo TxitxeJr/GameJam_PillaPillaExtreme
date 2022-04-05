@@ -123,17 +123,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &993888949 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7935740346396249083, guid: 99d7fa5987fc2524180c2f62e19de93d, type: 3}
-  m_PrefabInstance: {fileID: 1891210092}
+--- !u!1 &16594313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16594315}
+  - component: {fileID: 16594314}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &16594314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16594313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da19093975f643d49aa3052e9f0c7adf, type: 3}
+  m_Script: {fileID: 11500000, guid: 846c75bd4e057fb47bd974d5a1668907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &16594315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16594313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 394.27325, y: 120.746155, z: -1476.8188}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1075752768
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,18 +582,18 @@ PrefabInstance:
     - target: {fileID: 7785782400211059139, guid: 776d0b58ef65a984eaf28025658675c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 993888949}
+      objectReference: {fileID: 16594314}
     - target: {fileID: 7785782400211059139, guid: 776d0b58ef65a984eaf28025658675c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7785782400211059139, guid: 776d0b58ef65a984eaf28025658675c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToMenuScene
+      value: clickButton
       objectReference: {fileID: 0}
     - target: {fileID: 7785782400211059139, guid: 776d0b58ef65a984eaf28025658675c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ScenesManager, Assembly-CSharp
+      value: buttonController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7785782400211059139, guid: 776d0b58ef65a984eaf28025658675c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

@@ -6,7 +6,7 @@ using System.IO;
 
 public class ScenesManager : MonoBehaviour
 {
-    static ScenesManager instance;
+    public static ScenesManager instance;
     string sceneName;
     // Start is called before the first frame update
     private void Awake()
@@ -39,6 +39,11 @@ public class ScenesManager : MonoBehaviour
             {
                 SceneManager.LoadScene("Charlie's Scene");
             }
+        }
+
+        if(sceneName == "Settings")
+        {
+            Debug.Log("hola");
         }
     }
     public void ToGameScene()
