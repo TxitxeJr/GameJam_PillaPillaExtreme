@@ -7,8 +7,8 @@ public class timeManager : MonoBehaviour
 {
 
     public float startingTime;
-
     private Text text;
+
 
     // Start is called before the first frame update
     void Start()
