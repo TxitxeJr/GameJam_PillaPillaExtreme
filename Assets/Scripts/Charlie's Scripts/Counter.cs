@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Counter : MonoBehaviour
 {
     public float counter;
     public KidBehaviour kid;
-    
+    public Text text;
+
 
     void Start()
     {
@@ -18,7 +20,7 @@ public class Counter : MonoBehaviour
     {
         GameObject[] Kids = GameObject.FindGameObjectsWithTag("Kid");
         counter = Kids.Length;
-       
+        text.text = "" + Mathf.Round(counter);
 
     }
 }
