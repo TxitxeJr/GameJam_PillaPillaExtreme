@@ -40,6 +40,9 @@ public class Player : MonoBehaviour
         runningRID = Animator.StringToHash("isRunningR");
         runningUID = Animator.StringToHash("isRunningU");
         runningDID = Animator.StringToHash("isRunningD");
+
+        Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 180);
+        Lantern.transform.localPosition = new Vector3(3f, -10f, 0);
     }
 
     void Update()
