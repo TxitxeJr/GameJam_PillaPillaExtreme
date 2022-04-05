@@ -54,6 +54,7 @@ public class KidBehaviour : MonoBehaviour
             RightFoot();
             LeftFoot();
         }
+       
     }
 
     public void moveKid()
@@ -84,17 +85,18 @@ public class KidBehaviour : MonoBehaviour
         {
             nextLeftFootTime = Time.time + leftFootRate;
             Instantiate(leftFoot, transform.position, transform.rotation);
-            Destroy(leftFoot, 5f);
+           
         }
+        
     }
     public void RightFoot()
     {
         if (Time.time > nextRightFootTime)
         {
             nextRightFootTime = Time.time + rightFootRate;
-            Instantiate(rightFoot, transform.position, transform.rotation);
-            Destroy(rightFoot, 5f);
+            Instantiate(rightFoot, transform.position, transform.rotation); 
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
