@@ -17,9 +17,16 @@ public class Kid
 public class KidBehaviour : MonoBehaviour
 {
     public bool isCatched;
+    public bool isMoving;
     Rigidbody2D rb2d;
     public Kid kid;
     public SpriteRenderer niño;
+    public GameObject leftFoot;
+    public GameObject rightFoot;
+    public float nextLeftFootTime;
+    public float leftFootRate;
+    public float nextRightFootTime;
+    public float rightFootRate;
 
     void Start()
     {
@@ -28,6 +35,7 @@ public class KidBehaviour : MonoBehaviour
         this.niño = GetComponent<SpriteRenderer>();
         this.niño.enabled = false;
         isCatched = false;
+        isMoving = false;
 
     }
 
@@ -38,12 +46,19 @@ public class KidBehaviour : MonoBehaviour
         if(this.niño.enabled == true && Input.GetKeyDown(KeyCode.Space))
         {
             isCatched = true;
+            isMoving = false;
             Destroy(this.gameObject);
+        }
+        if (isMoving)
+        {
+            RightFoot();
+            LeftFoot();
         }
     }
 
     public void moveKid()
     {
+        isMoving = true;
         if (kid.isOnTarget == false)
         {
             transform.position = Vector3.MoveTowards(transform.position, kid.kidTarget.transform.position, kid.kidSpeed * Time.deltaTime);
@@ -60,6 +75,25 @@ public class KidBehaviour : MonoBehaviour
                     kid.nextPosition = 0;
                 }
             }
+        }
+    }
+
+    public void LeftFoot()
+    {
+        if(Time.time > nextLeftFootTime)
+        {
+            nextLeftFootTime = Time.time + leftFootRate;
+            Instantiate(leftFoot, transform.position, transform.rotation);
+            Destroy(leftFoot, 5f);
+        }
+    }
+    public void RightFoot()
+    {
+        if (Time.time > nextRightFootTime)
+        {
+            nextRightFootTime = Time.time + rightFootRate;
+            Instantiate(rightFoot, transform.position, transform.rotation);
+            Destroy(rightFoot, 5f);
         }
     }
 
