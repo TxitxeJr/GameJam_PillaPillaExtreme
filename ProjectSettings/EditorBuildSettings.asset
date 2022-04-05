@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 7b5ef196bc632114c973fd00f7b4e36a
   - enabled: 1
     path: Assets/Scenes/Charlie's Scene.unity
     guid: 3b66c470ed3cb7d4db85c539219dd40d
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 59295b5e5cbebfc40b1a50dd1dbde475
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: ea603e7953b91f744b91bc69a1c09fc7
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 566eaa89d6d6be84ba83cadfe08706d8
   m_configObjects: {}

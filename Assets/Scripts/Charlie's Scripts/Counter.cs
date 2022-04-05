@@ -12,7 +12,8 @@ public class Counter : MonoBehaviour
 
     void Start()
     {
-       
+        GameObject[] Kids = GameObject.FindGameObjectsWithTag("Kid");
+        counter = Kids.Length;
     }
 
     // Update is called once per frame

@@ -6637,6 +6637,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &957144759 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5242059913748538782, guid: 32f425161e6af3446aaac512596f7f5c, type: 3}
+  m_PrefabInstance: {fileID: 5242059912788641591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 273f413f75d1b63448e72b587fbb409f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!213 &964448627
 Sprite:
   m_ObjectHideFlags: 0
@@ -9422,6 +9433,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 396633035731249143, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
+      propertyPath: m_Name
+      value: Counter
+      objectReference: {fileID: 0}
     - target: {fileID: 396633036205792577, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -9509,6 +9524,14 @@ PrefabInstance:
     - target: {fileID: 396633036205792581, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 396633036397348449, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
+      propertyPath: startingTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 396633036397348461, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
+      propertyPath: m_Name
+      value: Timer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
@@ -10011,6 +10034,51 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+--- !u!1 &1698625105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1698625107}
+  - component: {fileID: 1698625106}
+  m_Layer: 0
+  m_Name: Win/Lose Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1698625106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698625105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0436a25368d78478d66647491fa8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: {fileID: 957144759}
+  time: {fileID: 2104663771}
+--- !u!4 &1698625107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698625105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -155.04607, y: 304.06183, z: -812.71545}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1741315502
 GameObject:
   m_ObjectHideFlags: 0
@@ -11857,6 +11925,17 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!114 &2104663771 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 396633036397348449, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
+  m_PrefabInstance: {fileID: 1527531365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9480ef3cc42a546ab5442a3bd1ec37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2145944923
 MonoBehaviour:
   m_ObjectHideFlags: 0

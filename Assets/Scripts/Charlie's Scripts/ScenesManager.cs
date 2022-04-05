@@ -7,6 +7,7 @@ using System.IO;
 public class ScenesManager : MonoBehaviour
 {
     static ScenesManager instance;
+    string sceneName;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -24,17 +25,30 @@ public class ScenesManager : MonoBehaviour
     }
     void Start()
     {
-      
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-      //programar condicion de victoria y derrota una vez tengamos las escenas  
+        Scene scene = SceneManager.GetActiveScene();
+        sceneName = scene.name;
+        if (sceneName == "Tutorial")
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene("Charlie's Scene");
+            }
+        }
     }
     public void ToGameScene()
     {
         SceneManager.LoadScene("Charlie's Scene");
+    }
+
+    public void ToTutorialScene()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 
 
