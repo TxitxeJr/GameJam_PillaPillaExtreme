@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
         }
 
         else if (Input.GetKey(KeyCode.S))
-        {
+        { 
             mov = Movement.DOWN;
             isRunningD = true;
         }
@@ -101,24 +101,28 @@ public class Player : MonoBehaviour
                 rb2D.velocity = new Vector2(current_speed * delta, 0);
                 Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 270);
                 Lantern.transform.localPosition = new Vector3(8.5f, -10f, 0);
+                
                 break;
             case Movement.LEFT:
                 current_speed = -speed;
                 rb2D.velocity = new Vector2(current_speed * delta, 0);
                 Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 90);
                 Lantern.transform.localPosition = new Vector3(0, -10f, 0);
+                
                 break;
             case Movement.UP:
                 current_speed = speed;
                 rb2D.velocity = new Vector2(0, current_speed * delta);
                 Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 0);
                 Lantern.transform.localPosition = new Vector3(-3f, 0, 0);
+                
                 break;
             case Movement.DOWN:
                 current_speed = -speed;
                 rb2D.velocity = new Vector2(0, current_speed * delta);
                 Lantern.transform.localRotation = Quaternion.Euler(Lantern.transform.localPosition.x, Lantern.transform.localPosition.y, 180);
                 Lantern.transform.localPosition = new Vector3(3f, -10f, 0);
+              
                 break;
         }
     }

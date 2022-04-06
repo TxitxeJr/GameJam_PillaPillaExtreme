@@ -45,12 +45,14 @@ public class KidBehaviour : MonoBehaviour
         moveKid();
         if(this.niño.enabled == true && Input.GetKeyDown(KeyCode.Space))
         {
+            FXmanager.PlaySound("catch_ghost");
             isCatched = true;
             isMoving = false;
             Destroy(this.gameObject);
         }
         if (isMoving)
         {
+
             RightFoot();
             LeftFoot();
         }
