@@ -404,7 +404,8 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 7112048242203238016, guid: 495f367c0206b4b46aed4c2b4119dc86, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 234557244114706753, guid: d72c7513b58290a4ab005218c4222879, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d72c7513b58290a4ab005218c4222879, type: 3}
 --- !u!114 &88444534
 MonoBehaviour:
@@ -999,6 +1000,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2958849946159044057, guid: 72895f3896aa9d34c82bf44a1dcc8445, type: 3}
   m_PrefabInstance: {fileID: 1874655886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &362286130 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 234557244546518555, guid: d72c7513b58290a4ab005218c4222879, type: 3}
+  m_PrefabInstance: {fileID: 86977754}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &367424015
 GameObject:
@@ -55947,6 +55953,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!82 &940831232 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 234557244601271477, guid: d72c7513b58290a4ab005218c4222879, type: 3}
+  m_PrefabInstance: {fileID: 86977754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &957144759 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5242059913748538782, guid: 32f425161e6af3446aaac512596f7f5c, type: 3}
@@ -80259,6 +80270,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1700696445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 234557244114706758, guid: d72c7513b58290a4ab005218c4222879, type: 3}
+  m_PrefabInstance: {fileID: 86977754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1700696446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700696445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfe49070af857b40853ee7f88596b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 940831232}
+  fxSource: {fileID: 362286130}
+  menuMusic: {fileID: 0}
+  effect: {fileID: 8300000, guid: 84c368798d70c204cbbba5a884b92b83, type: 3}
+  musicslider: {fileID: 0}
+  fxslider: {fileID: 0}
 --- !u!1 &1741315502
 GameObject:
   m_ObjectHideFlags: 0
