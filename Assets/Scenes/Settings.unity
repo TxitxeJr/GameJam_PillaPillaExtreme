@@ -719,6 +719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolumeSettings
       objectReference: {fileID: 0}
+    - target: {fileID: 7785782400831293151, guid: 776d0b58ef65a984eaf28025658675c9, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7785782400926614861, guid: 776d0b58ef65a984eaf28025658675c9, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -79711,11 +79711,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 396633036205792583, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
       propertyPath: m_ReferenceResolution.x
-      value: 960
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 396633036205792583, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
       propertyPath: m_ReferenceResolution.y
-      value: 540
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 396633036397348449, guid: 127b52e9d8162ee4eaff1b4e5ff7a9df, type: 3}
       propertyPath: startingTime
