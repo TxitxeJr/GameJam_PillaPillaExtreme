@@ -10,6 +10,7 @@ TagManager:
   - Kid 1
   - Kid 2
   - Kid 3
+  - Decorations
   layers:
   - Default
   - TransparentFX

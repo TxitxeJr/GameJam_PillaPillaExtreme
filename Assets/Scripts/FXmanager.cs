@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class FXmanager : MonoBehaviour
 {
-    public static AudioClip catchSound;
     static AudioSource audioSrc;
+    public static AudioClip catchSound;
+    public static AudioClip walkSound;
+
     void Start()
     {
         catchSound = Resources.Load<AudioClip>("catch_ghost");
+        walkSound = Resources.Load<AudioClip>("walk");
         audioSrc = GetComponent<AudioSource>();
 
     }
@@ -25,6 +28,9 @@ public class FXmanager : MonoBehaviour
         {
             case "catch_ghost":
                 audioSrc.PlayOneShot(catchSound);
+                break;
+            case "walk":
+                audioSrc.PlayOneShot(walkSound);
                 break;
            
         }

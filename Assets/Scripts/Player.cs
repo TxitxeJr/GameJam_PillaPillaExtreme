@@ -7,8 +7,10 @@ public class Player : MonoBehaviour
     public float speed = 10f;
     private float current_speed = 0;
     private float current_speed2 = 0;
+    private float timeSinceLastPlayed;
     private Rigidbody2D rb2D;
     public GameObject Lantern;
+    public bool isColiding;
 
     enum Movement { STILL, RIGHT, LEFT, UP, DOWN };
     private Movement mov;
@@ -37,6 +39,8 @@ public class Player : MonoBehaviour
         isRunningU = false;
         isRunningD = false;
 
+        isColiding = false;
+
         runningLID = Animator.StringToHash("isRunningL");
         runningRID = Animator.StringToHash("isRunningR");
         runningUID = Animator.StringToHash("isRunningU");
@@ -59,30 +63,45 @@ public class Player : MonoBehaviour
         {
             mov = Movement.UP;
             isRunningU = true;
+            timeSinceLastPlayed += Time.deltaTime;
         }
 
         else if (Input.GetKey(KeyCode.S))
         { 
             mov = Movement.DOWN;
             isRunningD = true;
+            timeSinceLastPlayed += Time.deltaTime;
         }
 
         else if (Input.GetKey(KeyCode.A))
         {
             mov = Movement.LEFT;
             isRunningL = true;
+            timeSinceLastPlayed += Time.deltaTime;
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
             mov = Movement.RIGHT;
             isRunningR = true;
+            timeSinceLastPlayed += Time.deltaTime;
         }
+       
         
         anim.SetBool(runningLID, isRunningL);
         anim.SetBool(runningRID, isRunningR);
         anim.SetBool(runningUID, isRunningU);
         anim.SetBool(runningDID, isRunningD);
+
+        if (timeSinceLastPlayed>0.25)
+        {
+            timeSinceLastPlayed = 0;
+            FXmanager.PlaySound("walk");
+        }if(isColiding == true)
+        {
+            timeSinceLastPlayed = 0;
+        }
+        
     }
 
     private void FixedUpdate()
@@ -134,4 +153,5 @@ public class Player : MonoBehaviour
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
     }
+    
 }
